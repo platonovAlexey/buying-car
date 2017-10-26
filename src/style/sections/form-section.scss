@@ -1,0 +1,154 @@
+.form{
+	&-section{
+		position: relative;
+		text-align: center;
+	}
+	&-row{
+		display: block;
+		@include clearfix;
+		margin-bottom: 15px;
+	}
+	&__input{
+		height: 50px;
+		background: #fff;
+		width: 100%;
+		border-radius: 7px;
+		display: block;
+		border: none;
+		font-size: 18px;
+		color: #696969;
+		font-weight: 300;
+		border: 1px solid #dddddd;
+		padding-left: 20px;
+		margin-bottom: 15px;
+		&--name{
+			text-align: center;
+			padding-left: 0;
+		}
+		&--100{
+			width: 100%;
+		}
+		&--50{
+			width: 48%;
+			float: left;
+			margin-right: 29px;
+			&--m0{
+				margin: 0;
+			}
+		}
+		&--33{
+			width: 31%;
+			float: left;
+			margin-right: 25px;
+		}
+	}
+	&__select{
+		@extend .form__input;
+		&--33{
+			width: 31%;
+			float: left;
+			margin-right: 25px;
+			&--m0{
+				margin: 0;
+			}
+		}
+	}
+	&__textarea{
+		resize: none;
+		background: #fff;
+		font-size: 16px;
+		color: #949a9f;
+		display: block;
+		width: 100%;
+		border-radius: 7px;
+		padding-left: 20px;
+		border: 1px solid #dddddd;
+	}
+	&__btn{
+		max-width: 370px;
+		border-radius: 7px;
+		background: #0473e4;
+		font-size: 20px;
+		color: #fff;
+		text-align: center;
+		border:none;
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		padding: 15px 0;
+		cursor: pointer;
+		transition: all .7s;
+		&:hover{
+			transition: all .7s;
+			text-decoration: none;
+			color: #fff;
+			background: #0963be;
+		}
+	}
+}
+.label{
+	&__text{
+		font-size: 14px;
+		color: #000;
+		text-align: center;
+		vertical-align: top;
+	}
+	&__link{
+		font-size: 14px;
+		color: #0070c9;
+		text-decoration: underline;
+		vertical-align: top;
+		&:hover{
+			color: #0070c9;
+			text-decoration: none;
+		}
+	}
+}
+
+input[type="text"]{
+	font-size: 16px;
+	color: #000;
+}
+
+input[type="email"]{
+	font-size: 16px;
+	color: #000;
+}
+
+select{
+	font-size: 16px;
+	color: #000;
+}
+
+option{
+	font-size: 16px;
+	color: #000;
+	font-weight: 300;
+}
+
+label{
+	margin: 0;
+	display: block;
+	text-align: center;
+	line-height: 1.4;
+}
+
+[type=radio], [type=checkbox]{
+	width: 18px;
+	height: 18px;
+	margin-right: 10px;
+}
+
+textarea{
+	resize: none;
+	background: #fff;
+	font-size: 16px;
+	color: #000;
+	display: block;
+	width: 100%;
+	border-radius: 7px;
+	padding-left: 20px;
+	padding-top: 25px;
+	border: 1px solid #dddddd;
+	margin-bottom: 15px;
+}

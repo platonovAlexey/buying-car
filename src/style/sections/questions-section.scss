@@ -1,0 +1,27 @@
+.questions{
+	&-item{
+		position: relative;
+		margin-bottom: 50px;
+		text-align: left;
+		&--mb{
+			margin-bottom: 0;
+		}
+	}
+	&__title{
+		height: 66px;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 24px;
+		color: #000;
+		margin-bottom: 25px;
+		span{
+			color: #0473e4;
+		}
+	}
+	&__text{
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 22px;
+		color: #000;
+	}
+}

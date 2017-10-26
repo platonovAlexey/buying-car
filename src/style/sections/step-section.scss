@@ -1,0 +1,52 @@
+.step{
+	&-section{
+		@include clearfix;
+	}
+	&-item{
+		position: relative;
+		border:1px solid #f0f0f0;
+		border-radius: 7px;
+		text-align: center;
+		min-height: 470px;
+	}
+	&__picture{
+		border-top-left-radius: 7px;
+		border-top-right-radius: 7px;
+		height: 183px;
+		margin-bottom: 25px;
+		padding: 0;
+		img{
+			width: 100%;
+			border-top-left-radius: 7px;
+			border-top-right-radius: 7px;
+		}
+	}
+	&__move{
+		font-size: 18px;
+		color: #888888;
+		margin-bottom: 5px;
+	}
+	&__title{
+		font-size: 24px;
+		font-weight: bold;
+		color: #000;
+		margin-bottom: 18px;
+	}
+	&__text{
+		font-size: 16px;
+		line-height: 24px;
+		color: #000000;
+		font-weight: 300;
+		margin-bottom: 25px;
+	}
+	&__link{
+		font-size: 18px;
+		color: #0473e4;
+		text-decoration: underline;
+		font-weight: 500;
+		&:hover{
+			color: #0473e4;
+			text-decoration: none;
+		}
+	}
+}

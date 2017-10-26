@@ -1,0 +1,350 @@
+include blocks/head-service/head
+include common/mixins
+include common/js
+
+
+body
+	.layout_center_wrapper-project
+		header.header
+			+top-line()
+			.container
+				.row
+					.col-12
+						.header-text-wrapper
+							h1.header__title
+								|Юлмарт покупает
+								br
+								span автомобили
+								br
+								|в Санкт-Петербурге
+							.header__description
+								|Теперь в Юлмарте можно выгодно
+								br
+								|и безопасно продать свой автомобиль.
+								br
+								| Полностью прозрачная сделка.
+								br
+								|Продайте авто в щедрые руки!
+							a(href="#form-section", class="header__link js-scroll") Оставить заявку
+			button(class="header__button")
+
+		section.b-section.step-section
+			h2.title-sub
+				|Продайте свой автомобиль
+				br
+				|за 4 простых шага
+			.container
+				.row
+					.col-lg-3.col-md-6.col-sm-6.col-12
+						.step-item
+							.step__picture
+								img(src="https://fast.ulmart.ru/ns/verstka/buying-car/img/step-picture1.jpg", alt="")
+							.step__move
+								|Шаг 1
+							.step__title
+								|Оставьте заявку
+							.step__text
+								|Оцените ваше авто, заполнив 
+								br
+								|простую форму, и дождитесь 
+								br
+								|звонка оператора.
+							a(href="#form-section", class="step__link js-scroll") Оставить заявку
+
+					.col-lg-3.col-md-6.col-sm-6.col-12
+						.step-item
+							.step__picture
+								img(src="https://fast.ulmart.ru/ns/verstka/buying-car/img/step-picture2.jpg", alt="")
+							.step__move
+								|Шаг 2
+							.step__title
+								|Ждите звонка
+							.step__text
+								|Наш специалист свяжется 
+								br
+								|с вами, уточнит детали, 
+								br
+								|озвучит примерную 
+								br
+								|стоимость авто.
+
+					.col-lg-3.col-md-6.col-sm-6.col-12
+						.step-item
+							.step__picture
+								img(src="https://fast.ulmart.ru/ns/verstka/buying-car/img/step-picture3.jpg", alt="")
+							.step__move
+								|Шаг 3
+							.step__title
+								|Выездной эксперт
+							.step__text
+								|По предварительной 
+								br
+								|договоренности к вам 
+								br
+								|приедет наш эксперт, 
+								br
+								|чтобы провести бесплатную 
+								br
+								|экспресс-диагностику 
+								br
+								|автомобиля (в СПб. и ЛО).
+
+					.col-lg-3.col-md-6.col-sm-6.col-12
+						.step-item
+							.step__picture
+								img(src="https://fast.ulmart.ru/ns/verstka/buying-car/img/step-picture4.jpg", alt="")
+							.step__move
+								|Шаг 4
+							.step__title
+								|Выгодная сделка
+							.step__text
+								|Оформляем документы 
+								br
+								|на продажу.
+								br
+								|Нам — автомобиль,
+								br
+								| вам — деньги!
+
+		section.b-section.advantages-section
+			h2.title-sub
+				|Наши преимущества
+			.container
+				.row
+					.col-lg-4.col-md-4.col-sm-6.col-12
+						.advantages-item
+							.advantages__picture
+								img(src="https://fast.ulmart.ru/ns/verstka/buying-car/img/advantages-icon1.png", alt="")
+							.advantages__title
+								|Цена выгоднее,
+								br
+								|чем в Trade-In
+							.advantages__text
+								|Самые выгодные предложения среди 
+								br
+								|конкурентов по Санкт-Петербургу —
+								br
+								|убедитесь сами!
+						
+					.col-lg-4.col-md-4.col-sm-6.col-12
+						.advantages-item
+							.advantages__picture
+								img(src="https://fast.ulmart.ru/ns/verstka/buying-car/img/advantages-icon2.png", alt="")
+							.advantages__title
+								|Полностью
+								br
+								|безопасная сделка
+							.advantages__text
+								|Все сделки заключаются
+								br
+								|в соответствии
+								br
+								|с законодательством РФ.
+					.col-lg-4.col-md-4.col-sm-6.col-12
+						.advantages-item
+							.advantages__picture
+								img(src="https://fast.ulmart.ru/ns/verstka/buying-car/img/advantages-icon3.png", alt="")
+							.advantages__title
+								|Индивидуальный
+								br
+								|подход
+							.advantages__text
+								|Доверив нам выкуп автомобиля,
+								br
+								|вы гарантированно останетесь
+								br
+								|удовлетворены результатом!
+
+		section.b-section.form-section#form-section
+			h2.title-sub
+				|Оставьте заявку
+			.title-sub__desc
+				|Заполните форму, и наши специалисты свяжутся с вами.
+			.container
+				.row
+					.col-lg-8.col-md-8.col-sm-12.col-12.offset-lg-2.offset-md-2
+						form(action="https://docs.google.com/forms/d/e/1FAIpQLSeGbajw6Y_yPuU9cARe9C1By6Bajfmtbs7ci1wV1zylVoO7Iw/formResponse" id="form")
+							.form-row
+								input(type="text" id="form__name" pattern="^[а-яА-ЯёЁa-zA-Z]+$" class="form__input form__input--name form__input--100 req" name="entry.1110572503" placeholder="Ф.И.О" title="Укажите Ф.И.О" required)
+								input(type="text" id="phone" class="form__input form__input--50 req" name="entry.2057706783" placeholder="Телефон" title="Укажите Телефон" required)
+								input(type="email" pattern="^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$" class="form__input form__input--50 form__input--50--m0 req" name="entry.280696008" placeholder="E-mail" title="Укажите E-mail")
+							.form-row
+								select(name="entry.1524737095" class="form__select form__select--33" id="form__select--mark")
+									option(data-value="" value="" class="form__option form__option--mark" disabled selected) Марка
+									option(data-value="ACURA" class="form__option form__option--mark") ACURA
+									option(data-value="ALFA ROMEO" class="form__option form__option--mark") ALFA ROMEO
+									option(data-value="ASTON MARTIN" class="form__option form__option--mark") ASTON MARTIN
+									option(data-value="AUDI" class="form__option form__option--mark") AUDI
+									option(data-value="BAW" class="form__option form__option--mark") BAW
+									option(data-value="BENTLEY" class="form__option form__option--mark") BENTLEY
+									option(data-value="BMW" class="form__option form__option--mark") BMW
+									option(data-value="BUGATTI" class="form__option form__option--mark") BUGATTI
+									option(data-value="BUICK" class="form__option form__option--mark") BUICK
+									option(data-value="BYD" class="form__option form__option--mark") BYD
+									option(data-value="CADILLAC" class="form__option form__option--mark") CADILLAC
+									option(data-value="CHERY" class="form__option form__option--mark") CHERY
+									option(data-value="CHEVROLET" class="form__option form__option--mark") CHEVROLET
+									option(data-value="CHRYSLER" class="form__option form__option--mark") CHRYSLER
+									option(data-value="CITROËN" class="form__option form__option--mark") CITROËN
+									option(data-value="DACIA" class="form__option form__option--mark") DACIA
+									option(data-value="DAEWOO" class="form__option form__option--mark") DAEWOO
+									option(data-value="DAIHATSU" class="form__option form__option--mark") DAIHATSU
+									option(data-value="DERWAYS" class="form__option form__option--mark") DERWAYS
+									option(data-value="DODGE" class="form__option form__option--mark") DODGE
+									option(data-value="FAW" class="form__option form__option--mark") FAW
+									option(data-value="FERRARI" class="form__option form__option--mark") FERRARI
+									option(data-value="FIAT" class="form__option form__option--mark") FIAT
+									option(data-value="FORD" class="form__option form__option--mark") FORD
+									option(data-value="FORD USA" class="form__option form__option--mark") FORD USA
+									option(data-value="FOTON" class="form__option form__option--mark") FOTON
+									option(data-value="GEELY" class="form__option form__option--mark") GEELY
+									option(data-value="GMC" class="form__option form__option--mark") GMC
+									option(data-value="GREAT WALL" class="form__option form__option--mark") GREAT WALL
+									option(data-value="HONDA" class="form__option form__option--mark") HONDA
+									option(data-value="HUMMER" class="form__option form__option--mark") HUMMER
+									option(data-value="HYUNDAI" class="form__option form__option--mark") HYUNDAI
+									option(data-value="INFINITI" class="form__option form__option--mark") INFINITI
+									option(data-value="ISUZU" class="form__option form__option--mark") ISUZU
+									option(data-value="JAGUAR" class="form__option form__option--mark") JAGUAR
+									option(data-value="JEEP" class="form__option form__option--mark") JEEP
+									option(data-value="KIA" class="form__option form__option--mark") KIA
+									option(data-value="LADA" class="form__option form__option--mark") LADA
+									option(data-value="LAMBORGHINI" class="form__option form__option--mark") LAMBORGHINI
+									option(data-value="LANCIA" class="form__option form__option--mark") LANCIA
+									option(data-value="LAND ROVER" class="form__option form__option--mark") LAND ROVER
+									option(data-value="LEXUS" class="form__option form__option--mark") LEXUS
+									option(data-value="LIFAN" class="form__option form__option--mark") LIFAN
+									option(data-value="LINCOLN" class="form__option form__option--mark") LINCOLN
+									option(data-value="LOTUS" class="form__option form__option--mark") LOTUS
+									option(data-value="MASERATI" class="form__option form__option--mark") MASERATI
+									option(data-value="MAZDA" class="form__option form__option--mark") MAZDA
+									option(data-value="MERCEDES-BENZ" class="form__option form__option--mark") MERCEDES-BENZ
+									option(data-value="MG" class="form__option form__option--mark") MG
+									option(data-value="MINI" class="form__option form__option--mark") MINI
+									option(data-value="MITSUBISHI" class="form__option form__option--mark") MITSUBISHI
+									option(data-value="NISSAN" class="form__option form__option--mark") NISSAN
+									option(data-value="OLDSMOBILE" class="form__option form__option--mark") OLDSMOBILE
+									option(data-value="OPEL" class="form__option form__option--mark") OPEL
+									option(data-value="PEUGEOT" class="form__option form__option--mark") PEUGEOT
+									option(data-value="PLYMOUTH" class="form__option form__option--mark") PLYMOUTH
+									option(data-value="PONTIAC" class="form__option form__option--mark") PONTIAC
+									option(data-value="PORSCHE" class="form__option form__option--mark") PORSCHE
+									option(data-value="PROTON" class="form__option form__option--mark") PROTON
+									option(data-value="RENAULT" class="form__option form__option--mark") RENAULT
+									option(data-value="ROLLS-ROYCE" class="form__option form__option--mark") ROLLS-ROYCE
+									option(data-value="ROVER" class="form__option form__option--mark") ROVER
+									option(data-value="SAAB" class="form__option form__option--mark") SAAB
+									option(data-value="SEAT" class="form__option form__option--mark") SEAT
+									option(data-value="SKODA" class="form__option form__option--mark") SKODA
+									option(data-value="SMART" class="form__option form__option--mark") SMART
+									option(data-value="SSANGYONG" class="form__option form__option--mark") SSANGYONG
+									option(data-value="SUBARU" class="form__option form__option--mark") SUBARU
+									option(data-value="SUZUKI" class="form__option form__option--mark") SUZUKI
+									option(data-value="TAGAZ" class="form__option form__option--mark") TAGAZ
+									option(data-value="TESLA" class="form__option form__option--mark") TESLA
+									option(data-value="TOYOTA" class="form__option form__option--mark") TOYOTA
+									option(data-value="VOLVO" class="form__option form__option--mark") VOLVO
+									option(data-value="VW" class="form__option form__option--mark") VW
+									option(data-value="Другая" class="form__option form__option--mark") Другая
+								input(type="text" class="form__input form__input--50 form__input--33" name="entry.1513399796" placeholder="Модель" title="Укажите Модель")
+								select(name="entry.1581387337" class="form__select form__select--33 form__select--33--m0")
+									option(data-value="" value="" class="form__option form__option--year" disabled selected) Год
+									option(data-value="2007" class="form__option form__option--year") 2007
+									option(data-value="2008" class="form__option form__option--year") 2008
+									option(data-value="2009" class="form__option form__option--year") 2009
+									option(data-value="2010" class="form__option form__option--year") 2010
+									option(data-value="2011" class="form__option form__option--year") 2011
+									option(data-value="2012" class="form__option form__option--year") 2012
+									option(data-value="2013" class="form__option form__option--year") 2013
+									option(data-value="2014" class="form__option form__option--year") 2014
+									option(data-value="2015" class="form__option form__option--year") 2015
+									option(data-value="2016" class="form__option form__option--year") 2016
+									option(data-value="2017" class="form__option form__option--year") 2017
+									option(data-value="2018" class="form__option form__option--year") 2018
+									option(data-value="2019" class="form__option form__option--year") 2019
+								input(type="text" id="mileage" class="form__input form__input--50 form__input--33 req" name="entry.2065248667" placeholder="Пробег" title="Укажите Пробег")
+								input(type="text" id="engine" class="form__input form__input--50 form__input--33 req" name="entry.319264705" placeholder="Объем двигателя" title="Укажите Объем двигателя")
+								select(name="entry.12644915" class="form__select form__select--33 form__select--33--m0")
+									option(data-value="" value="" class="form__option form__option--box" disabled selected) Коробка
+									option(data-value="Автомат" class="form__option form__option--box") Автомат
+									option(data-value="Механика" class="form__option form__option--box") Механика
+							.form-row
+								textarea(name="entry.1325762942", cols="30", rows="7", class="form-textarea", placeholder="Дополнительная информация")
+							.form-row
+								label(for="rules")
+									input(type="checkbox" id="rules" class="req" required)
+									span(class="label__text") Я согласен с условиями 
+									a(href="http://www.ulmart.ru/help/spb/agreement", target="_blank", class="label__link") пользовательского соглашения
+							.form-row
+								input(class="form__btn" id="form__btn" type="submit" value="Отправить заявку" name="submit")
+
+
+
+		section.logos-company
+			img(src="https://fast.ulmart.ru/ns/verstka/buying-car/img/logos-cars.png", alt="")
+
+		section.b-section.questions-section
+			h2.title-sub
+				|Остались вопросы?
+			.container
+				.row
+					.col-lg-4.col-md-4.col-sm-6.col-12
+						.questions-item
+							.questions__title
+								span Вопрос: 
+								|выкупаете ли вы кредитные автомобили?
+							.questions__text
+								|Выкуп кредитных автомобилей в Санкт-Петербурге и Ленинградской области не осуществляется.
+					.col-lg-4.col-md-4.col-sm-6.col-12
+						.questions-item
+							.questions__title
+								span Вопрос: 
+								|я могу продать свою машину самостоятельно на вторичном рынке, зачем мне приходить к вам?
+							.questions__text
+								|У нас вы гарантированно безопасно и быстро продадите свой автомобиль и получить за него деньги, а на вторичном рынке на данный момент существует множесто мошеннических схем.
+					.col-lg-4.col-md-4.col-sm-6.col-12
+						.questions-item
+							.questions__title
+								span Вопрос: 
+								|выкупаете ли вы битые автомобили?
+							.questions__text
+								|Выкуп битых автомобилей в Санкт-Петербурге и Ленинградской области производится в зависимости от степени повреждения автомобилей. 
+
+				.row
+					.col-lg-4.col-md-4.col-sm-6.col-12
+						.questions-item.questions-item--mb
+							.questions__title
+								span Вопрос: 
+								|где возможно оценить мой автомобиль?
+							.questions__text
+								|Быстро и бесплатно оценить ваш автомобиль можно в Санкт-Петербурге по адресу Пулковское ш., д. 43, ПЦИЗ Пулково, или к вам приедет наш эксперт.
+					.col-lg-4.col-md-4.col-sm-6.col-12
+						.questions-item.questions-item--mb
+							.questions__title
+								span Вопрос: 
+								|какие автомобили вы выкупаете?
+							.questions__text
+								|Мы выкупаем автомобили с пробегом не более 150 тыс. км и не старше 10 лет.
+		section.b-section.b-section-nb.text-section
+			.container
+				.row
+					.col-12
+						p.key__text
+							|Вы являетесь владельцем транспортного средства и хотите быстро реализовать его? Мы предлагаем выкуп авто в СПб. дорого и срочно. В зависимости от состояния вашей машины мы сможем предложить максимально высокую цену за ваш автомобиль! Мы поможем с достоинством выйти из сложившейся ситуации, осуществим срочный выкуп автомобиля на максимально выгодных условиях 	&#8212; стоимость машины определяется оценщиком на месте после проведения экспресс-диагностики! Выкуп автомобилей в СПб. еще никогда не был таким простым, быстрым и надежным!
+
+		section
+			.popup--wrap
+				.popup
+					span.popup--cross
+					.popup--check
+					h3.popup--title Ваша заявка оформлена
+					p.popup--desc
+						| Наши специалисты свяжутся с Вами для уточнения деталей. 
+						br
+						|Спасибо, что выбрали Юлмарт!
+					a.popup--btn(target='_blank', href='https://www.ulmart.ru') Перейти на ulmart.ru
+
+	+footer-text()
+
+
+	include blocks/footer-service/footer-service

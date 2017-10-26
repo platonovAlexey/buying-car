@@ -1,0 +1,182 @@
+//DEFAULT STYLE//
+.top-line{
+	position: relative;
+	padding: 15px 0;
+	@include clearfix;
+	&__logo{
+		display: inline-block;
+		@include MQ(sm) {
+			
+		}
+		@include MQ(xs) {
+			display: block;
+			float: none;
+			text-align: center;
+			margin-left: 0;
+			margin-top: 15px;
+		}
+	}
+	&__mail{
+		font-weight: bold;
+		color: #fff;
+		font-size: 18px;
+		display: block;
+		position: relative;
+		transition: all .7s;
+		&:before{
+			content: "";
+			display: block;
+			width: 20px;
+			height: 14px;
+			background: url(https://fast.ulmart.ru/ns/verstka/buying-car/img/mail-icon.png)no-repeat;
+			position: absolute;
+			top: 6px;
+			left: -30px;
+		}
+		&:hover{
+			transition: all .7s;
+			text-decoration: underline;
+			color: #fff;
+		}
+	}
+
+	&__phone{
+		@extend .top-line__mail;
+		&:before{
+			background: url(https://fast.ulmart.ru/ns/verstka/buying-car/img/phone-icon.png)no-repeat;
+			width: 16px;
+			height: 16px;
+			top: 4px;
+		}
+	}
+}
+
+.header-text-wrapper{
+	margin-top: 180px;
+}
+
+.top-banner{
+	position: relative;
+	&__img{
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.header{
+	position: relative;
+	height: 100vh;
+	background: url(https://fast.ulmart.ru/ns/verstka/buying-car/img/header.jpg)no-repeat 0 0;
+	background-size: cover;
+	&__title{
+		font-size: 80px;
+		color: #fff;
+		font-weight: 100;
+		line-height: 1;
+		margin-bottom: 30px;
+		span{
+			font-weight: bold;
+		}
+	}
+	&__description{
+		font-size: 20px;
+		color: #fff;
+		line-height: 1.2;
+		font-weight: normal;
+		margin-bottom: 90px;
+	}
+	&__link{
+		font-size: 20px;
+		color: #fff;
+		border-radius: 7px;
+		background: #0473e4;
+		padding: 10px 60px 10px 60px;
+		text-align: center;
+		display: inline-block;
+		transition: all .7s;
+		&:hover{
+			transition: all .7s;
+			text-decoration: none;
+			color: #fff;
+			background: #0963be;
+		}
+	}
+	&__button{
+		background: url(https://fast.ulmart.ru/ns/verstka/buying-car/img/mouse-icon.png);
+		width: 24px;
+		height: 36px;
+		display: block;
+		border: 0;
+		position: absolute;
+		bottom: 30px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		animation: top 2s infinite;
+		&:focus{
+			outline: none;
+		}
+	}
+}
+
+.header__banner{
+	display: block;
+	margin: 0 auto;
+}
+
+.logos-company{
+	height: 89px;
+	background: #fafafa;
+	position: relative;
+	img{
+		@include absolute__center;
+		@include absolute-center;
+		margin: 0 auto;
+	}
+}
+
+.key__text{
+	font-size: 16px;
+	line-height: 24px;
+	color: #505050;
+	font-weight: 300;
+	text-align: left;
+}
+
+
+@keyframes top {
+	0% {
+		bottom: 0;
+	}
+	10% {
+		bottom: 2.5px;
+	}
+	20% {
+		bottom: 5px;
+	}
+	30% {
+		bottom: 7.5px;
+	}
+	40% {
+		bottom: 10px;
+	}
+	50% {
+		bottom: 12.5px;
+	}
+	60% {
+		bottom: 10px;
+	}
+	70% {
+		bottom: 7.5px;
+	}
+	80% {
+		bottom: 5px;
+	}
+	90% {
+		bottom: 2.5px;
+	}
+	100% {
+		bottom: 0;
+	}
+}
