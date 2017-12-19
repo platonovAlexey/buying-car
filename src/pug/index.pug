@@ -42,13 +42,13 @@ body
 							.step__move
 								|Шаг 1
 							.step__title
-								|Оставьте заявку
+								|Оформление заявки
 							.step__text
-								|Оцените ваше авто, заполнив 
+								|Оставьте заявку на оценку  
 								br
-								|простую форму, и дождитесь 
+								|вашего автомобиля, заполнив
 								br
-								|звонка оператора.
+								| простую форму.
 							a(href="#form-section", class="step__link js-scroll") Оставить заявку
 
 					.col-lg-3.col-md-6.col-sm-6.col-12
@@ -58,15 +58,15 @@ body
 							.step__move
 								|Шаг 2
 							.step__title
-								|Ждите звонка
+								|Ожидание звонка
 							.step__text
 								|Наш специалист свяжется 
 								br
-								|с вами, уточнит детали, 
+								|с вами для уточнения деталей
 								br
-								|озвучит примерную 
+								|и предварительной оценки
 								br
-								|стоимость авто.
+								|стоимости автомобиля.
 
 					.col-lg-3.col-md-6.col-sm-6.col-12
 						.step-item
@@ -77,17 +77,11 @@ body
 							.step__title
 								|Выездной эксперт
 							.step__text
-								|По предварительной 
+								|Наш эксперт бесплатно 
 								br
-								|договоренности к вам 
+								|проведёт экспресс-диагностику 
 								br
-								|приедет наш эксперт, 
-								br
-								|чтобы провести бесплатную 
-								br
-								|экспресс-диагностику 
-								br
-								|автомобиля (в СПб. и ЛО).
+								|вашего автомобиля в СПб и ЛО.
 
 					.col-lg-3.col-md-6.col-sm-6.col-12
 						.step-item
@@ -163,14 +157,14 @@ body
 			.container
 				.row
 					.col-lg-8.col-md-8.col-sm-12.col-12.offset-lg-2.offset-md-2
-						form(action="https://docs.google.com/forms/d/e/1FAIpQLSeGbajw6Y_yPuU9cARe9C1By6Bajfmtbs7ci1wV1zylVoO7Iw/formResponse" id="form")
+						.form(id="form")
 							.form-row
-								input(type="text" id="form__name" pattern="^[а-яА-ЯёЁa-zA-Z]+$" class="form__input form__input--name form__input--100 req" name="entry.1110572503" placeholder="Ф.И.О" title="Укажите Ф.И.О" required)
-								input(type="text" id="phone" class="form__input form__input--50 req" name="entry.2057706783" placeholder="Телефон" title="Укажите Телефон" required)
-								input(type="email" pattern="^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$" class="form__input form__input--50 form__input--50--m0 req" name="entry.280696008" placeholder="E-mail" title="Укажите E-mail")
+								input(type="text" id="form__name" pattern="^[а-яА-ЯёЁa-zA-Z]+$" class="form__input form__input--name form__input--100 req form__input--name form__input--check" name="entry.1110572503" placeholder="Ф.И.О" title="Укажите Ф.И.О" required)
+								input(type="text" id="phone" class="form__input form__input--50 req form__input--check" name="entry.2057706783" placeholder="Телефон" title="Укажите Телефон" required)
+								input(type="email" pattern="^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$" class="form__input form__input--50 form__input--50--m0 req form__email form__input--check" name="entry.280696008" placeholder="E-mail" title="Укажите E-mail")
 							.form-row
 								select(name="entry.1524737095" class="form__select form__select--33" id="form__select--mark")
-									option(data-value="" value="" class="form__option form__option--mark" disabled selected) Марка
+									option(data-value="" value="0" class="form__option form__option--mark" selected="selected") Марка
 									option(data-value="ACURA" class="form__option form__option--mark") ACURA
 									option(data-value="ALFA ROMEO" class="form__option form__option--mark") ALFA ROMEO
 									option(data-value="ASTON MARTIN" class="form__option form__option--mark") ASTON MARTIN
@@ -248,7 +242,7 @@ body
 									option(data-value="Другая" class="form__option form__option--mark") Другая
 								input(type="text" class="form__input form__input--50 form__input--33" name="entry.1513399796" placeholder="Модель" title="Укажите Модель")
 								select(name="entry.1581387337" class="form__select form__select--33 form__select--33--m0")
-									option(data-value="" value="" class="form__option form__option--year" disabled selected) Год
+									option(data-value="" value="0" class="form__option form__option--year" disabled selected) Год
 									option(data-value="2007" class="form__option form__option--year") 2007
 									option(data-value="2008" class="form__option form__option--year") 2008
 									option(data-value="2009" class="form__option form__option--year") 2009
@@ -265,16 +259,16 @@ body
 								input(type="text" id="mileage" class="form__input form__input--50 form__input--33 req" name="entry.2065248667" placeholder="Пробег" title="Укажите Пробег")
 								input(type="text" id="engine" class="form__input form__input--50 form__input--33 req" name="entry.319264705" placeholder="Объем двигателя" title="Укажите Объем двигателя")
 								select(name="entry.12644915" class="form__select form__select--33 form__select--33--m0")
-									option(data-value="" value="" class="form__option form__option--box" disabled selected) Коробка
+									option(data-value="" value="0" class="form__option form__option--box" disabled selected) Коробка
 									option(data-value="Автомат" class="form__option form__option--box") Автомат
 									option(data-value="Механика" class="form__option form__option--box") Механика
 							.form-row
 								textarea(name="entry.1325762942", cols="30", rows="7", class="form-textarea", placeholder="Дополнительная информация")
 							.form-row
-								label(for="rules")
-									input(type="checkbox" id="rules" class="req" required)
-									span(class="label__text") Я согласен с условиями 
-									a(href="http://www.ulmart.ru/help/spb/agreement", target="_blank", class="label__link") пользовательского соглашения
+								label(for="checkbox")
+									input(type="checkbox" class="req" id="checkbox" required)
+									span(class="label__text") Я согласен на обработку 
+									a(href="http://www.ulmart.ru/help/spb/agreement", target="_blank", class="label__link") персональных данных
 							.form-row
 								input(class="form__btn" id="form__btn" type="submit" value="Отправить заявку" name="submit")
 
@@ -330,7 +324,7 @@ body
 				.row
 					.col-12
 						p.key__text
-							|Вы являетесь владельцем транспортного средства и хотите быстро реализовать его? Мы предлагаем выкуп авто в СПб. дорого и срочно. В зависимости от состояния вашей машины мы сможем предложить максимально высокую цену за ваш автомобиль! Мы поможем с достоинством выйти из сложившейся ситуации, осуществим срочный выкуп автомобиля на максимально выгодных условиях 	&#8212; стоимость машины определяется оценщиком на месте после проведения экспресс-диагностики! Выкуп автомобилей в СПб. еще никогда не был таким простым, быстрым и надежным!
+							|Вы являетесь владельцем транспортного средства и хотите быстро реализовать его? Мы предлагаем выкуп авто в СПб дорого и срочно. В зависимости от состояния вашей машины мы сможем предложить максимально высокую цену за ваш автомобиль! Мы поможем с достоинством выйти из сложившейся ситуации, осуществим срочный выкуп автомобиля в Санкт-Петербурге на максимально выгодных условиях 	&#8212; стоимость машины определяется оценщиком на месте после проведения экспресс-диагностики! Выкуп автомобилей в СПб еще никогда не был таким простым, быстрым и надежным!
 
 		section
 			.popup--wrap
@@ -339,7 +333,9 @@ body
 					.popup--check
 					h3.popup--title Ваша заявка оформлена
 					p.popup--desc
-						| Наши специалисты свяжутся с Вами для уточнения деталей. 
+						| Наши специалисты свяжутся с вами
+						br
+						| для уточнения деталей. 
 						br
 						|Спасибо, что выбрали Юлмарт!
 					a.popup--btn(target='_blank', href='https://www.ulmart.ru') Перейти на ulmart.ru
